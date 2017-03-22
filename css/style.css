@@ -1,0 +1,204 @@
+body{
+	background: pink;
+}
+
+h1{
+	font-size: 200px;
+	color: white;
+}
+
+
+@media (max-width: 1150px){
+	h1{
+		font-size: 150px;
+	}
+}
+
+@media (max-width: 900px){
+	h1{
+		font-size: 100px;
+	}
+}
+
+@media screen and (max-width: 800px){
+	body{
+		background: green;
+	}
+	h1{
+		color: yellow;
+	}
+}
+
+@media (max-width: 500px){
+	body{
+		background: red;
+	}
+}
+
+.uno{
+	max-width: 800px;
+	margin: auto;
+	overflow: auto;
+}
+.uno article{
+	width: 50%;
+	float: left;
+	padding: 30px;
+	box-sizing: border-box;
+	color: white;
+}
+
+@media (max-width: 800px){
+	.uno article{
+		float: none;
+		width: 100%;
+	}
+	.solo_web{
+		display: none;
+	}
+}
+
+@media (min-width: 800px){
+	.solo_mobile{
+		display: none;
+	}
+}
+
+.link{
+	display: inline-block;
+	padding: 10px 30px;
+	background: blue;
+	color: white;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+.link:hover{
+	background: red;
+	transform: rotate(10deg) scale(1.1) skew(10deg);
+}
+
+@keyframes cambiarColor{
+	from{background: red;}
+	to{
+		background: cyan;
+		transform: scale(0.5);}
+}
+
+.circulo{
+	width: 300px;
+	height: 300px;
+	background: red;
+	border-radius: 50%;
+	animation-name: cambiarColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes otraAnimacion{
+	0%{
+		background: orange;
+	}
+	25%{
+		background: yellow;
+		transform: scale(2,3);
+	}
+	50%{
+		background: green;
+		transform: translateX(100px);
+	}
+	75%{
+		background: violet;
+		transform: scale(2,3) rotate(100deg);
+	}
+	100%{background: orange;}
+}
+
+.circulo2{
+	width: 200px;
+	height: 200px;
+	background: orange;
+	border-radius: 50%;
+	/*animation-name: otraAnimacion;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;*/
+}
+
+@keyframes giroDerecha{
+	0%{transform: rotate(0deg);}
+	25%{transform: rotate(90deg);}
+	50%{transform: rotate(180deg);}
+	75%{transform: rotate(270deg);}
+	100%{transform: rotate(360deg);}
+}
+
+@keyframes giroIzquierda{
+	0%{transform: rotate(0deg);}
+	25%{transform: rotate(-90deg);}
+	50%{transform: rotate(-180deg);}
+	75%{transform: rotate(-270deg);}
+	100%{transform: rotate(-360deg);}
+}
+
+.gear{
+	position: relative;
+}
+
+.gear1{
+	font-size: 100px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: inline-block;
+    animation-name: giroDerecha;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.gear2{
+	font-size: 80px;
+	position: absolute;
+	top: -9px;
+    left: 73px;
+    display: inline-block;
+    animation-name: giroIzquierda;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.gear3{
+	font-size: 45px;
+    position: absolute;
+    top: 71px;
+    left: 96px;
+    animation-name: giroIzquierda;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.gear4{
+	font-size: 35px;
+    position: absolute;
+    top: 56px;
+    left: 73px;
+    display: inline-block;
+    animation-name: giroDerecha;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.gear5{
+	font-size: 120px;
+    position: absolute;
+    top: 3px;
+    left: 128px;
+    display: inline-block;
+    animation-name: giroDerecha;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
